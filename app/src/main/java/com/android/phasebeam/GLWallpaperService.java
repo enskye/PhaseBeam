@@ -145,6 +145,7 @@ public abstract class GLWallpaperService extends WallpaperService
                 if (visible)
                 {
                     glSurfaceView.onResume();
+                    glSurfaceView.queueEvent(renderer::resetFrameTime);
                     choreographer.postFrameCallback(frameCallback);
                 }
                 else

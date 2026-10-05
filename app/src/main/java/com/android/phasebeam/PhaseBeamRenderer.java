@@ -111,6 +111,11 @@ public class PhaseBeamRenderer implements GLSurfaceView.Renderer
             this.scaleSize = scaleSize;
         }
 
+        public void resetFrameTime()
+        {
+            startTime = SystemClock.uptimeMillis();
+        }
+
         public void setOffset(float xOffset, float yOffset, int xPixels, int yPixels)
         {
             particleManager.setXOffset(xOffset);
